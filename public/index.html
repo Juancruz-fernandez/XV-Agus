@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Agustina Fernandez · Mis XV</title>
+    <meta
+      name="description"
+      content="Invitación a los XV años de Agustina Fernandez. 23 de octubre de 2026, Janos Ituzaingo 2, 21:30 a 5:30. Dress code: elegante."
+    />
+    <meta name="theme-color" content="#04070f" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Mis XV · Agustina Fernandez" />
+    <meta
+      property="og:description"
+      content="23 de octubre de 2026 · Janos Ituzaingo 2 · 21:30 a 5:30 · Dress code: elegante."
+    />
+    <meta property="og:image" content="/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Invitación a los XV años de Agustina Fernandez" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@200;300;400;500&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+
+  <body class="is-locked">
+    <div class="intro" id="intro">
+      <canvas class="intro__sparkles" id="introCanvas" aria-hidden="true"></canvas>
+      <div class="intro__inner">
+        <p class="intro__eyebrow" data-intro>23 · 10 · 2026</p>
+        <h1 class="intro__name" id="introName">Agustina Fernandez</h1>
+        <div class="ornament" data-intro aria-hidden="true"><span></span><i></i><span></span></div>
+        <p class="intro__xv" data-intro>Mis XV</p>
+        <button class="btn btn--gold intro__cta" id="enterBtn" type="button" data-intro>
+          Entrar a la invitación
+        </button>
+      </div>
+      <span class="intro__frame" aria-hidden="true"></span>
+    </div>
+
+    <canvas class="bg-particles" id="particles" aria-hidden="true"></canvas>
+    <div class="progress" id="progress" aria-hidden="true"></div>
+
+    <main class="app" id="app">
+      <section class="hero" id="hero">
+        <p class="hero__eyebrow" data-reveal>Tengo el honor de invitarlos</p>
+        <h1 class="hero__name split" id="heroName">Agustina Fernandez</h1>
+        <div class="ornament" data-reveal aria-hidden="true"><span></span><i></i><span></span></div>
+        <p class="hero__xv" data-reveal>Mis XV</p>
+        <p class="hero__date" data-reveal>23 de octubre de 2026</p>
+        <a class="hero__cue" href="#countdown" aria-label="Bajar a la cuenta regresiva">
+          <span>Descubrir</span>
+          <svg viewBox="0 0 24 34" aria-hidden="true">
+            <rect x="1" y="1" width="22" height="32" rx="11" />
+            <circle class="hero__cue-dot" cx="12" cy="10" r="2.4" />
+          </svg>
+        </a>
+      </section>
+
+      <section class="section section--countdown" id="countdown">
+        <p class="section__eyebrow" data-reveal>Cuenta regresiva</p>
+        <h2 class="section__title" data-reveal>Hasta la fiesta</h2>
+
+        <div class="countdown" id="countdownGrid" role="timer" aria-live="off">
+          <div class="countdown__cell" data-reveal>
+            <span class="countdown__num" id="cdDays">00</span>
+            <span class="countdown__label">Días</span>
+          </div>
+          <div class="countdown__cell" data-reveal>
+            <span class="countdown__num" id="cdHours">00</span>
+            <span class="countdown__label">Horas</span>
+          </div>
+          <div class="countdown__cell" data-reveal>
+            <span class="countdown__num" id="cdMinutes">00</span>
+            <span class="countdown__label">Minutos</span>
+          </div>
+          <div class="countdown__cell" data-reveal>
+            <span class="countdown__num" id="cdSeconds">00</span>
+            <span class="countdown__label">Segundos</span>
+          </div>
+        </div>
+
+        <p class="countdown__done" id="countdownDone" hidden>¡Es hora de festejar!</p>
+        <p class="section__lead" data-reveal>
+          El 23 de octubre de 2026 voy a cumplir quince años y quiero celebrarlo con vos.
+        </p>
+      </section>
+
+      <section class="section" id="evento">
+        <p class="section__eyebrow" data-reveal>La fiesta</p>
+        <h2 class="section__title" data-reveal>Dónde y cuándo</h2>
+
+        <div class="cards">
+          <article class="card" data-reveal>
+            <span class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+            </span>
+            <h3 class="card__title">Janos Ituzaingo 2</h3>
+            <p class="card__text">El lugar donde nos vamos a encontrar.</p>
+            <div class="card__actions">
+              <a class="btn btn--gold btn--sm" id="mapsBtn" href="https://www.google.com/maps/search/?api=1&amp;query=Janos%20Ituzaingo%202" target="_blank" rel="noopener noreferrer">
+                Cómo llegar
+              </a>
+              <button class="btn btn--ghost btn--sm" id="copyAddressBtn" type="button">Copiar dirección</button>
+            </div>
+          </article>
+
+          <article class="card" data-reveal>
+            <span class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5.4l3.6 2.2"/></svg>
+            </span>
+            <h3 class="card__title">21:30 a 5:30</h3>
+            <p class="card__text">Nos encontramos a las 21:30. La fiesta arranca puntual.</p>
+            <div class="card__actions">
+              <a class="btn btn--ghost btn--sm" id="calendarBtn" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Mis%20XV%20de%20Agustina%20Fernandez&amp;dates=20261023T213000/20261024T053000&amp;location=Janos%20Ituzaingo%202&amp;details=Dress%20code%3A%20Elegante" target="_blank" rel="noopener noreferrer">
+                Agregar al calendario
+              </a>
+            </div>
+          </article>
+
+          <article class="card card--dress" data-reveal>
+            <span class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M9 3l3 3 3-3 5 5-3 2 1 10H7l1-10-3-2 4-5Z"/></svg>
+            </span>
+            <h3 class="card__title">Dress code</h3>
+            <p class="dress">Elegante</p>
+            <p class="dress__note">Intentemos evitar los tonos azul y celeste 💙🩵</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section--rsvp" id="rsvp">
+        <p class="section__eyebrow" data-reveal>Confirmación</p>
+        <h2 class="section__title" data-reveal>¿Venís a festejar conmigo?</h2>
+        <p class="section__lead" data-reveal>
+          Contame si vas a estar. Me ayuda muchísimo a organizar todo.
+        </p>
+
+        <form class="form" id="rsvpForm" novalidate data-reveal>
+          <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+          <div class="field">
+            <label class="field__label" for="rsvpName">Nombre y apellido</label>
+            <input class="field__input" id="rsvpName" name="nombre" type="text" placeholder="Tu nombre" autocomplete="name" maxlength="80" required />
+          </div>
+
+          <fieldset class="field field--options">
+            <legend class="field__label">Confirmación de asistencia</legend>
+            <div class="choices">
+              <label class="choice">
+                <input type="radio" name="asiste" value="si" />
+                <span class="choice__box">Sí, ahí voy</span>
+              </label>
+              <label class="choice">
+                <input type="radio" name="asiste" value="no" />
+                <span class="choice__box">No puedo ir</span>
+              </label>
+            </div>
+          </fieldset>
+
+          <p class="form__status" id="rsvpStatus" role="status" aria-live="polite"></p>
+          <button class="btn btn--gold btn--wide" type="submit">Confirmar asistencia</button>
+        </form>
+      </section>
+
+      <section class="section section--songs" id="canciones">
+        <p class="section__eyebrow" data-reveal>La pista</p>
+        <h2 class="section__title" data-reveal>¿Qué canción no puede faltar?</h2>
+        <p class="section__lead" data-reveal>
+          Mandame tu canción favorita y la sumamos a la lista de la fiesta.
+        </p>
+
+        <form class="form" id="songForm" novalidate data-reveal>
+          <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+          <div class="field">
+            <label class="field__label" for="songTitle">Canción</label>
+            <input class="field__input" id="songTitle" name="cancion" type="text" placeholder="Nombre de la canción" maxlength="120" required />
+          </div>
+
+          <div class="field">
+            <label class="field__label" for="songArtist">Artista <span>(opcional)</span></label>
+            <input class="field__input" id="songArtist" name="artista" type="text" placeholder="Quién la canta" maxlength="80" />
+          </div>
+
+          <p class="form__status" id="songStatus" role="status" aria-live="polite"></p>
+          <button class="btn btn--gold btn--wide" type="submit">Enviar canción</button>
+        </form>
+      </section>
+
+      <section class="section section--gift" id="regalo">
+        <p class="section__eyebrow" data-reveal>Detalle</p>
+        <h2 class="section__title" data-reveal>Si querés hacerme un regalo</h2>
+        <p class="section__lead" data-reveal>
+          Tu presencia ya es el mejor regalo. Y si igual querés sumar algo, podés hacerlo acá.
+        </p>
+
+        <div class="gift" data-reveal>
+          <p class="gift__label">Alias para transferir</p>
+          <p class="gift__alias" id="alias">agulla.mp</p>
+          <button class="btn btn--gold" id="copyAliasBtn" type="button">
+            <svg class="btn__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2.5"/><path d="M15 5.5A2.5 2.5 0 0 0 12.5 3h-7A2.5 2.5 0 0 0 3 5.5v7A2.5 2.5 0 0 0 5.5 15"/></svg>
+            Copiar alias
+          </button>
+          <p class="gift__hint">Alias: agulla.mp</p>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="ornament" aria-hidden="true"><span></span><i></i><span></span></div>
+        <p class="footer__name">Agustina Fernandez</p>
+        <p class="footer__line">Mis XV · 23 de octubre de 2026 · Janos Ituzaingo 2</p>
+        <div class="footer__share">
+          <button class="btn btn--gold" id="waBtn" type="button">
+            <svg class="btn__icon btn__icon--fill" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.6 2 2.2 6.4 2.2 11.84c0 1.74.46 3.44 1.32 4.94L2 22l5.36-1.4a9.8 9.8 0 0 0 4.68 1.2h.01c5.43 0 9.84-4.4 9.84-9.84C21.89 6.4 17.48 2 12.04 2Zm5.76 14.02c-.24.68-1.4 1.3-1.94 1.34-.5.05-.98.23-3.3-.68-2.78-1.1-4.54-3.94-4.68-4.12-.14-.18-1.12-1.49-1.12-2.84s.71-2.01.96-2.29c.25-.28.55-.35.73-.35.18 0 .37 0 .53.01.17.01.4-.06.62.48.24.57.8 1.97.87 2.11.07.14.12.3.02.49-.1.18-.15.29-.29.45-.14.16-.3.35-.43.47-.14.14-.29.29-.12.57.17.28.74 1.22 1.6 1.98 1.09.97 2.01 1.27 2.3 1.41.28.14.45.12.61-.07.17-.2.7-.81.88-1.09.18-.28.37-.23.62-.14.25.09 1.63.77 1.91.91.28.14.46.21.53.32.07.12.07.66-.17 1.34Z"/></svg>
+            Compartir por WhatsApp
+          </button>
+          <button class="btn btn--ghost btn--sm" id="shareBtn" type="button">
+            <svg class="btn__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 10.6l6.8-4M8.6 13.4l6.8 4"/></svg>
+            Compartir invitación
+          </button>
+        </div>
+      </footer>
+    </main>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="/app.js"></script>
+  </body>
+</html>

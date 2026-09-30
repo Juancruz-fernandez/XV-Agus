@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0a1226" />
+      <stop offset="0.55" stop-color="#0b1428" />
+      <stop offset="1" stop-color="#04070f" />
+    </linearGradient>
+    <radialGradient id="glowTop" cx="0.5" cy="0" r="0.75">
+      <stop offset="0" stop-color="#5678c4" stop-opacity="0.45" />
+      <stop offset="1" stop-color="#5678c4" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="glowGold" cx="0.85" cy="0.95" r="0.6">
+      <stop offset="0" stop-color="#cba961" stop-opacity="0.32" />
+      <stop offset="1" stop-color="#cba961" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fffaf0" />
+      <stop offset="0.45" stop-color="#e7cd97" />
+      <stop offset="0.75" stop-color="#9d7c39" />
+      <stop offset="1" stop-color="#e7cd97" />
+    </linearGradient>
+    <linearGradient id="goldSoft" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f7ecd2" />
+      <stop offset="1" stop-color="#cba961" />
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)" />
+  <rect width="1200" height="630" fill="url(#glowTop)" />
+  <rect width="1200" height="630" fill="url(#glowGold)" />
+
+  <rect x="26" y="26" width="1148" height="578" fill="none" stroke="#e7cd97" stroke-opacity="0.28" />
+  <path d="M26 66V26h40 M1134 26h40v40 M26 564v40h40 M1134 604h40v-40" fill="none" stroke="#e7cd97" stroke-opacity="0.6" stroke-width="2" />
+
+  <g fill="#f7ecd2" fill-opacity="0.85">
+    <circle cx="140" cy="120" r="2.4" />
+    <circle cx="1050" cy="150" r="1.8" />
+    <circle cx="180" cy="510" r="2" />
+    <circle cx="1090" cy="470" r="2.6" />
+    <circle cx="620" cy="92" r="1.6" />
+    <circle cx="700" cy="548" r="1.8" />
+    <circle cx="300" cy="200" r="1.4" />
+    <circle cx="960" cy="300" r="1.5" />
+  </g>
+
+  <text x="600" y="196" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="17" letter-spacing="9" fill="#e7cd97" fill-opacity="0.9">23 · 10 · 2026</text>
+
+  <text x="600" y="288" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="76" fill="url(#gold)">Agustina Fernandez</text>
+
+  <g stroke="#e7cd97" stroke-opacity="0.4">
+    <line x1="470" y1="330" x2="585" y2="330" />
+    <line x1="615" y1="330" x2="730" y2="330" />
+  </g>
+  <rect x="595" y="325" width="10" height="10" transform="rotate(45 600 330)" fill="#e7cd97" />
+
+  <text x="600" y="428" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="96" font-style="italic" fill="url(#goldSoft)">Mis XV</text>
+
+  <text x="600" y="500" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="30" fill="#ece6db" fill-opacity="0.92">Janos Ituzaingo 2 · 21:30 a 5:30</text>
+  <text x="600" y="548" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="19" letter-spacing="4" fill="#97a0b6">DRESS CODE: ELEGANTE</text>
+</svg>

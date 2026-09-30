@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Panel · Mis XV Agustina Fernandez</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Jost:wght@200;300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/admin.css" />
+  </head>
+
+  <body class="admin-body">
+    <main class="panel">
+      <header class="panel__head">
+        <div>
+          <p class="panel__eyebrow">Acceso privado</p>
+          <h1 class="panel__title">Mis XV · Agustina Fernandez</h1>
+          <p class="panel__sub">Confirmaciones y canciones sugeridas</p>
+        </div>
+        <div class="panel__headActions" id="headActions" hidden>
+          <a class="btn btn--ghost btn--sm" href="/api/admin/export.csv">Descargar CSV</a>
+          <button class="btn btn--ghost btn--sm" id="refreshBtn" type="button">Actualizar</button>
+          <button class="btn btn--ghost btn--sm" id="logoutBtn" type="button">Salir</button>
+        </div>
+      </header>
+
+      <section class="login" id="loginView">
+        <form class="form" id="loginForm" novalidate>
+          <div class="field">
+            <label class="field__label" for="password">Contraseña</label>
+            <input class="field__input" id="password" name="password" type="password" autocomplete="current-password" required />
+          </div>
+          <p class="form__status" id="loginStatus" role="status" aria-live="polite"></p>
+          <button class="btn btn--gold btn--wide" type="submit">Entrar</button>
+        </form>
+      </section>
+
+      <section id="dataView" hidden>
+        <div class="stats">
+          <div class="stat">
+            <span class="stat__num" id="statYes">0</span>
+            <span class="stat__label">Asisten</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num" id="statNo">0</span>
+            <span class="stat__label">No pueden</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num" id="statSongs">0</span>
+            <span class="stat__label">Canciones</span>
+          </div>
+        </div>
+
+        <section class="block">
+          <h2 class="block__title">Asistencia</h2>
+          <input class="field__input block__search" id="searchRsvp" type="search" placeholder="Buscar por nombre" />
+          <div class="table-wrap">
+            <table class="table">
+              <thead>
+                <tr><th>Nombre y apellido</th><th>Asiste</th><th>Recibido</th><th></th></tr>
+              </thead>
+              <tbody id="rsvpBody"></tbody>
+            </table>
+          </div>
+          <p class="empty" id="rsvpEmpty" hidden>Todavía no llegó ninguna confirmación.</p>
+        </section>
+
+        <section class="block">
+          <h2 class="block__title">Canciones sugeridas</h2>
+          <input class="field__input block__search" id="searchSong" type="search" placeholder="Buscar canción o artista" />
+          <div class="table-wrap">
+            <table class="table">
+              <thead>
+                <tr><th>Canción</th><th>Artista</th><th>Recibido</th><th></th></tr>
+              </thead>
+              <tbody id="songBody"></tbody>
+            </table>
+          </div>
+          <p class="empty" id="songEmpty" hidden>Todavía no llegaron canciones.</p>
+        </section>
+      </section>
+
+      <p class="panel__foot">23 de octubre de 2026 · Janos Ituzaingo 2 · 21:30 a 5:30</p>
+    </main>
+
+    <script src="/admin.js"></script>
+  </body>
+</html>
