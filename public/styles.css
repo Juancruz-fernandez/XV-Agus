@@ -798,45 +798,6 @@ body::after {
   color: var(--muted);
 }
 
-/* ---------- Footer ---------- */
-
-.footer {
-  display: grid;
-  justify-items: center;
-  gap: 0.7rem;
-  padding: 10vh 6vw calc(8vh + env(safe-area-inset-bottom));
-  text-align: center;
-  border-top: 1px solid rgba(231, 205, 151, 0.12);
-}
-
-.footer .ornament {
-  width: min(200px, 55%);
-}
-
-.footer__name {
-  margin: 0;
-  font-family: var(--display);
-  font-size: clamp(1.5rem, 5.5vw, 2.2rem);
-}
-
-.footer__line {
-  margin: 0 0 1rem;
-  color: var(--muted);
-  font-size: 0.78rem;
-  letter-spacing: 0.16em;
-}
-
-.footer__share {
-  display: grid;
-  justify-items: center;
-  gap: 0.7rem;
-}
-
-.btn__icon--fill {
-  fill: currentColor;
-  stroke: none;
-}
-
 /* ---------- Toast ---------- */
 
 .toast {

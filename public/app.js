@@ -4,8 +4,7 @@
   const EVENT = {
     alias: 'agulla.mp',
     address: 'Janos Ituzaingo 2',
-    start: new Date('2026-10-23T21:30:00-03:00'),
-    title: 'Mis XV · Agustina Fernandez'
+    start: new Date('2026-10-23T21:30:00-03:00')
   };
 
   const $ = (id) => document.getElementById(id);
@@ -285,38 +284,6 @@
   $('copyAddressBtn').addEventListener('click', async () => {
     const ok = await copy(EVENT.address);
     showToast(ok ? 'Dirección copiada' : `Dirección: ${EVENT.address}`);
-  });
-
-  /* ---------- Compartir ---------- */
-
-  const inviteLink = () => window.location.origin + window.location.pathname;
-
-  const inviteText =
-    `¡Me llegó la invitación de los XV de Agustina Fernandez! 🎉\n\n` +
-    `23 de octubre de 2026\nJanos Ituzaingo 2\n21:30 a 5:30\nDress code: elegante\n\n` +
-    `Entrá acá y confirmá si vas: `;
-
-  $('waBtn').addEventListener('click', () => {
-    const url = `https://wa.me/?text=${encodeURIComponent(inviteText + inviteLink())}`;
-    window.open(url, '_blank', 'noopener');
-  });
-
-  $('shareBtn').addEventListener('click', async () => {
-    const share = {
-      title: EVENT.title,
-      text: `${EVENT.title} — 23 de octubre de 2026, ${EVENT.address}. Dress code: elegante.`,
-      url: inviteLink()
-    };
-
-    if (navigator.share) {
-      try {
-        await navigator.share(share);
-        return;
-      } catch {}
-    }
-
-    const ok = await copy(share.url);
-    showToast(ok ? 'Link de la invitación copiado' : share.url);
   });
 
   /* ---------- Formularios ---------- */
